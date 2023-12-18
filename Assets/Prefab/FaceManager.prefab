@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8978644531436501906
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2233647266658962099, guid: 6c72cb29f83ce47589a62f366189987d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2233647266658962099, guid: 6c72cb29f83ce47589a62f366189987d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2233647266658962099, guid: 6c72cb29f83ce47589a62f366189987d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2233647266658962099, guid: 6c72cb29f83ce47589a62f366189987d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2233647266658962099, guid: 6c72cb29f83ce47589a62f366189987d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2233647266658962099, guid: 6c72cb29f83ce47589a62f366189987d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2233647266658962099, guid: 6c72cb29f83ce47589a62f366189987d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2233647266658962099, guid: 6c72cb29f83ce47589a62f366189987d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2233647266658962099, guid: 6c72cb29f83ce47589a62f366189987d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2233647266658962099, guid: 6c72cb29f83ce47589a62f366189987d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574453200327366301, guid: 6c72cb29f83ce47589a62f366189987d, type: 3}
+      propertyPath: m_Name
+      value: FaceManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4300135535403485738, guid: 6c72cb29f83ce47589a62f366189987d, type: 3}
+      propertyPath: fruitsImages.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 6f7931fb225c44b929a73deee512cb7b, type: 3}
+    - target: {fileID: 4300135535403485738, guid: 6c72cb29f83ce47589a62f366189987d, type: 3}
+      propertyPath: fruitsImages.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: cc0b3bf56f4174eb7abb8a07e973c520, type: 3}
+    - target: {fileID: 4300135535403485738, guid: 6c72cb29f83ce47589a62f366189987d, type: 3}
+      propertyPath: fruitsImages.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 493e303fc834a47fd9545997df7dbdc5, type: 3}
+    - target: {fileID: 4300135535403485738, guid: 6c72cb29f83ce47589a62f366189987d, type: 3}
+      propertyPath: fruitsImages.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: b168538aa24e94dc688fb063b5da228d, type: 3}
+    - target: {fileID: 4300135535403485738, guid: 6c72cb29f83ce47589a62f366189987d, type: 3}
+      propertyPath: fruitsImages.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: a76bc53888f5642768847dea34a99b5f, type: 3}
+    - target: {fileID: 4300135535403485738, guid: 6c72cb29f83ce47589a62f366189987d, type: 3}
+      propertyPath: fruitsImages.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: e35cfa2281bf34e5491b68db3b116a69, type: 3}
+    - target: {fileID: 4300135535403485738, guid: 6c72cb29f83ce47589a62f366189987d, type: 3}
+      propertyPath: fruitsPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 7291805889251354433, guid: 4576a3393b40d475f9ce452fd9211b84, type: 3}
+    - target: {fileID: 4300135535403485738, guid: 6c72cb29f83ce47589a62f366189987d, type: 3}
+      propertyPath: fruitsPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 4505344862457905921, guid: ec155d455179e4ed4a33170911b3c841, type: 3}
+    - target: {fileID: 4300135535403485738, guid: 6c72cb29f83ce47589a62f366189987d, type: 3}
+      propertyPath: fruitsPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 7256225932687814895, guid: 7e3c80323b91a46f2a56b8d0ce9423af, type: 3}
+    - target: {fileID: 4300135535403485738, guid: 6c72cb29f83ce47589a62f366189987d, type: 3}
+      propertyPath: fruitsPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 3695925427436722669, guid: 2d18da98302c84ee0956bbad0ab3c6c6, type: 3}
+    - target: {fileID: 4300135535403485738, guid: 6c72cb29f83ce47589a62f366189987d, type: 3}
+      propertyPath: fruitsPrefabs.Array.data[4]
+      value: 
+      objectReference: {fileID: 2207986421701610537, guid: fc02303cf307341c9bdef598648c99c5, type: 3}
+    - target: {fileID: 4300135535403485738, guid: 6c72cb29f83ce47589a62f366189987d, type: 3}
+      propertyPath: fruitsPrefabs.Array.data[5]
+      value: 
+      objectReference: {fileID: 4437022097434534523, guid: 1ce13b20c4ecd49a580bb24c7b7eacdd, type: 3}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6c72cb29f83ce47589a62f366189987d, type: 3}

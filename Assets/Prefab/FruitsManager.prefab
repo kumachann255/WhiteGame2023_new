@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2574453200327366301
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2233647266658962099}
+  - component: {fileID: 4300135535403485738}
+  m_Layer: 0
+  m_Name: FruitsManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2233647266658962099
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2574453200327366301}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.7273543, y: 4.1704454, z: -0.20883515}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4300135535403485738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2574453200327366301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f08fdf77805a4cccabaf44ed18fb3a1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fruitsPrefabs:
+  - {fileID: 6255790110619307208, guid: 29398836722a04da7bf9427feb3f0422, type: 3}
+  - {fileID: 6255790110619307208, guid: ff97ac47ae2b34adbbfabb77319778d8, type: 3}
+  - {fileID: 7072054686853816440, guid: 736a6ac2a6e3247708aa9ff1404927c0, type: 3}
+  - {fileID: 5479359408371109081, guid: 3a4b114269b344c43b43f3546fe8cc69, type: 3}
+  - {fileID: 1099724649218926801, guid: 71493441f59d34c13b2b9577d86acdd7, type: 3}
+  - {fileID: 1927626476310296212, guid: b06e072248b7e4957920855e33be9113, type: 3}
+  nextFruitsImage: {fileID: 0}
+  nextNextFruitsImage: {fileID: 0}
+  fruitsImages:
+  - {fileID: 21300000, guid: 2e03ea969ad214b0192ba28e14714b93, type: 3}
+  - {fileID: 21300000, guid: c5ae1dc1d5f174e65a1ed36f76514c7a, type: 3}
+  - {fileID: 21300000, guid: 2dbbf643738384a299ca91e3463eda08, type: 3}
+  - {fileID: 21300000, guid: c355403ffdaf2440c9a7f89ab2fcfc17, type: 3}
+  - {fileID: 21300000, guid: 1c44db24e9a4a48c7925bb69269f0b10, type: 3}
+  - {fileID: 21300000, guid: b10208a50b957494fb8b8e6d75e05fcb, type: 3}
+  scoreText: {fileID: 0}
+  fruitsList: []
+  resultScoreText: {fileID: 0}
+  resultObject: {fileID: 0}
+  basket: {fileID: 0}
+  audioSource: {fileID: 0}
+  dropSoundList:
+  - {fileID: 8300000, guid: 368335f6b198c46abab31d7340b854e6, type: 3}
+  - {fileID: 8300000, guid: bdad33a22c86a4f5da2120c8a8576978, type: 3}
+  - {fileID: 8300000, guid: d60be96550fa449c1b04e0c067a8db1b, type: 3}
