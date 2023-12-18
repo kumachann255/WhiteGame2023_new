@@ -45,6 +45,7 @@ public class FruitsManager : MonoBehaviour
     [SerializeField] private GameObject LeftWall;
     
     public float cursorSpeed = 2.5f;
+    public float CursorOffset = 200.0f;
 
     private int _nextFruitsIndex;
     private int _nextNextFruitsIndex;
@@ -58,7 +59,6 @@ public class FruitsManager : MonoBehaviour
     
     private float _rightCursorMax = 0.1f;
     private float _leftCursorMax = 0.1f;
-    private float _cursorOffset = 100.0f;
 
     // このクラスをシングルトンにする
     private static FruitsManager instance;
@@ -86,8 +86,8 @@ public class FruitsManager : MonoBehaviour
         nextNextFruitsImage.sprite = fruitsImages[_nextNextFruitsIndex];
         _isDrop = true;
         _isFinish = false;
-        _rightCursorMax = Camera.main.WorldToScreenPoint(RightWall.transform.position).x - _cursorOffset;
-        _leftCursorMax = Camera.main.WorldToScreenPoint(LeftWall.transform.position).x + _cursorOffset;
+        _rightCursorMax = Camera.main.WorldToScreenPoint(RightWall.transform.position).x - CursorOffset;
+        _leftCursorMax = Camera.main.WorldToScreenPoint(LeftWall.transform.position).x + CursorOffset;
     }
 
     private void Update()
