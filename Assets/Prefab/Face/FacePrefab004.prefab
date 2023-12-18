@@ -178,7 +178,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 272198943109968908, guid: d9cb862142e7f43dcace7f5cb63aeb17, type: 3}
       propertyPath: m_GravityScale
-      value: 1.6
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 548322677591124248, guid: d9cb862142e7f43dcace7f5cb63aeb17, type: 3}
       propertyPath: m_Radius
