@@ -15,9 +15,6 @@ public class Fruits : MonoBehaviour
     
     private float _deadTime = 0;
     
-    // private const float fruitsDropMaxPositionX = 2.0f;
-    // private const float fruitsDropMinPositionX = -5.6f;
-    
     private bool isDrop = false;
 
     private void Start()

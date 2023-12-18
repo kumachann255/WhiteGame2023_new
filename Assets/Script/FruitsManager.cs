@@ -41,6 +41,11 @@ public class FruitsManager : MonoBehaviour
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip[] dropSoundList;
 
+    [SerializeField] private GameObject RightWall;
+    [SerializeField] private GameObject LeftWall;
+    
+    public float cursorSpeed = 2.5f;
+
     private int _nextFruitsIndex;
     private int _nextNextFruitsIndex;
     private int _score;
@@ -51,6 +56,10 @@ public class FruitsManager : MonoBehaviour
     private const float FruitsDropPositionY = 3.1f;
     private const float NextFruitsDropPositionY = 310f;
     
+    private float _rightCursorMax = 0.1f;
+    private float _leftCursorMax = 0.1f;
+    private float _cursorOffset = 100.0f;
+
     // このクラスをシングルトンにする
     private static FruitsManager instance;
     
@@ -77,6 +86,8 @@ public class FruitsManager : MonoBehaviour
         nextNextFruitsImage.sprite = fruitsImages[_nextNextFruitsIndex];
         _isDrop = true;
         _isFinish = false;
+        _rightCursorMax = Camera.main.WorldToScreenPoint(RightWall.transform.position).x - _cursorOffset;
+        _leftCursorMax = Camera.main.WorldToScreenPoint(LeftWall.transform.position).x + _cursorOffset;
     }
 
     private void Update()
@@ -85,17 +96,33 @@ public class FruitsManager : MonoBehaviour
          {
              return;
          }
-        
-         Vector3 mousePosition = Input.mousePosition;
-         mousePosition.z = 0;
-         mousePosition.y = nextFruitsImage.transform.position.y;
-         // mousePosition.y = NextFruitsDropPositionY;
-         nextFruitsImage.transform.position = mousePosition;
-        
+         
+         // 矢印キーでフルーツを移動する
+         if (Input.GetKey(KeyCode.LeftArrow))
+         {
+             Vector3 position = nextFruitsImage.transform.position;
+             position.x -= cursorSpeed;
+             if (position.x < _leftCursorMax)
+             {
+                 position.x = _leftCursorMax;
+             }
+             nextFruitsImage.transform.position = position;
+         }
+         else if (Input.GetKey(KeyCode.RightArrow))
+         {
+             Vector3 position = nextFruitsImage.transform.position;
+             position.x += cursorSpeed;
+             if (position.x > _rightCursorMax)
+             {
+                 position.x = _rightCursorMax;
+             }
+             nextFruitsImage.transform.position = position;
+         }
+         
          // スペースキーが押されたらフルーツの種類をランダムに生成する
          if(Input.GetKeyDown(KeyCode.Space) && _isDrop)
          {
-             Vector3 position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+             Vector3 position = Camera.main.ScreenToWorldPoint(nextFruitsImage.transform.position);
              position.z = 0;
             
              position.y = FruitsDropPositionY;
@@ -114,7 +141,7 @@ public class FruitsManager : MonoBehaviour
              nextNextFruitsImage.sprite = fruitsImages[_nextNextFruitsIndex];
             
              // 生成したフルーツを少し傾ける
-             newFruits.transform.Rotate(new Vector3(0, 0, Random.Range(-180, 180)));
+             newFruits.transform.Rotate(new Vector3(0, 0, Random.Range(-90, 90)));
             
              _isDrop = false;
              StartCoroutine(Wait());
