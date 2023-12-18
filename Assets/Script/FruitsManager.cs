@@ -7,6 +7,7 @@ using Random = UnityEngine.Random;
 
 public enum FruitsType
 {
+    最小,
     さくらんぼ,
     いちご,
     みかん,
@@ -108,7 +109,7 @@ public class FruitsManager : MonoBehaviour
             
              // 生成したら次のフルーツを抽選する
              _nextFruitsIndex = _nextNextFruitsIndex;
-             _nextNextFruitsIndex = Random.Range((int)FruitsType.さくらんぼ, (int)FruitsType.みかん);
+             _nextNextFruitsIndex = Random.Range((int)FruitsType.最小, (int)FruitsType.みかん);
              nextFruitsImage.sprite = fruitsImages[_nextFruitsIndex];
              nextNextFruitsImage.sprite = fruitsImages[_nextNextFruitsIndex];
             
@@ -150,8 +151,8 @@ public class FruitsManager : MonoBehaviour
             Destroy(child.gameObject);
         }
         
-        _nextFruitsIndex = Random.Range((int)FruitsType.さくらんぼ, (int)FruitsType.みかん);
-        _nextNextFruitsIndex = Random.Range((int)FruitsType.さくらんぼ, (int)FruitsType.みかん);
+        _nextFruitsIndex = Random.Range((int)FruitsType.最小, (int)FruitsType.みかん);
+        _nextNextFruitsIndex = Random.Range((int)FruitsType.最小, (int)FruitsType.みかん);
         nextFruitsImage.sprite = fruitsImages[_nextFruitsIndex];
         nextNextFruitsImage.sprite = fruitsImages[_nextNextFruitsIndex];
         _isFinish = false;
