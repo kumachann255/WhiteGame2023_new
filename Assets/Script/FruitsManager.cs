@@ -60,6 +60,8 @@ public class FruitsManager : MonoBehaviour
     private float _rightCursorMax = 0.1f;
     private float _leftCursorMax = 0.1f;
 
+    private bool _canRestart;
+
     // このクラスをシングルトンにする
     private static FruitsManager instance;
     
@@ -88,6 +90,7 @@ public class FruitsManager : MonoBehaviour
         _isFinish = false;
         _rightCursorMax = Camera.main.WorldToScreenPoint(RightWall.transform.position).x - CursorOffset;
         _leftCursorMax = Camera.main.WorldToScreenPoint(LeftWall.transform.position).x + CursorOffset;
+        _canRestart = false;
     }
 
     private void Update()
@@ -144,14 +147,14 @@ public class FruitsManager : MonoBehaviour
              newFruits.transform.Rotate(new Vector3(0, 0, Random.Range(-90, 90)));
             
              _isDrop = false;
-             StartCoroutine(Wait());
+             StartCoroutine(Wait(1f));
          }
     }
     
     // コルーチンで1秒まつ
-    private IEnumerator Wait()
+    private IEnumerator Wait(float time)
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(time);
         _isDrop = true;
     }
     
@@ -169,6 +172,11 @@ public class FruitsManager : MonoBehaviour
     /// </summary>
     public void Reset()
     {
+        if (!_canRestart)
+        {
+            return;
+        }
+        
         _score = 0;
         scoreText.text = _score.ToString();
 
@@ -184,11 +192,19 @@ public class FruitsManager : MonoBehaviour
         nextNextFruitsImage.sprite = fruitsImages[_nextNextFruitsIndex];
         _isFinish = false;
         _isDrop = true;
+        _canRestart = false;
 
         // リザルトオブジェクトを非表示にする
         resultObject.SetActive(false);
         
         _isFinish = false;
+    }
+
+    // コルーチンで1秒まつ
+    private IEnumerator WaitRestart(float time)
+    {
+        yield return new WaitForSeconds(time);
+        _canRestart = true;
     }
 
     /// <summary>
@@ -204,6 +220,8 @@ public class FruitsManager : MonoBehaviour
         
         // SE
         audioSource.PlayOneShot(dropSoundList[(int)SoundList.GameOver]);
+        
+        StartCoroutine(WaitRestart(5));
     }
     
     /// <summary>
@@ -228,5 +246,5 @@ public class FruitsManager : MonoBehaviour
     public void PlaySoundSe(SoundList sound)
     {
         audioSource.PlayOneShot(dropSoundList[(int)sound]);
-    }
+    } 
 }
